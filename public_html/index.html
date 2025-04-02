@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Steller landing page.">
+    <meta name="author" content="Devcrud">
+    <title>iamaryanarora</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Bootstrap + Steller main styles -->
+    <link rel="stylesheet" href="assets/css/steller.css">
+</head>
+<style>
+    .img-wrapper {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        margin-bottom: 30px;
+        background: #000;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .img-wrapper:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .img-wrapper img {
+        width: 100%;
+        height: 250px;
+        object-fit: contain;
+        padding: 20px;
+        transition: all 0.3s ease;
+    }
+
+    /* Special styling for Ultimatum logo */
+    .portfolio-item:first-child .img-wrapper {
+        background: #000;
+    }
+
+    .portfolio-item:first-child .img-wrapper img {
+        padding: 40px;
+        filter: brightness(1.2);
+    }
+
+    /* White background for other logos */
+    .portfolio-item:not(:first-child) .img-wrapper {
+        background: #fff;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.85);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        padding: 20px;
+    }
+
+    .img-wrapper:hover .overlay {
+        opacity: 1;
+    }
+
+    .overlay-infos {
+        color: white;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .overlay-infos h5 {
+        color: #fff;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .overlay-infos p {
+        color: #ddd;
+        font-size: 0.9rem;
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+
+    .overlay-infos a {
+        color: #fff;
+        font-size: 1.2rem;
+        margin: 0 10px;
+        transition: all 0.3s ease;
+    }
+
+    .overlay-infos a:hover {
+        color: #007bff;
+    }
+
+    .img-thumbnail {
+        width: 200px;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .portfolio-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+
+    .portfolio-item {
+        flex: 0 0 33.333333%;
+        padding: 15px;
+    }
+
+    @media (max-width: 768px) {
+        .portfolio-item {
+            flex: 0 0 50%;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .portfolio-item {
+            flex: 0 0 100%;
+        }
+    }
+</style>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="assets/imgs/logo.svg" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#service">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#testmonial">Testmonial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="- btn btn-primary rounded ml-4" href="components.html">Copmonents</a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End of page navibation -->
+
+    <!-- Page Header -->
+    <header class="header" id="home">
+
+        <div class="container">
+
+            <div class="infos">
+
+                <h6 class="subtitle">hello,I'm</h6>
+                <h6 class="title">Aryan Arora</h6>
+                <p style="margin-top: 15px;">Backend Developer</p>
+                <div class="buttons pt-3">
+                    <a href="https://in.linkedin.com/in/aryan-arora-5b72392ab/" target="_blank"
+                        class="btn btn-primary rounded">HIRE ME</a>
+                    <a href="https://petvasta.s3.me-central-1.amazonaws.com/1743577668530-426050563.pdf"
+                        download="aryanarora.pdf" class="btn btn-dark rounded"
+                        onclick="event.preventDefault(); window.open(this.href, '_blank').then(() => window.location.href = this.href);">DOWNLOAD
+                        CV</a>
+                </div>
+
+
+                <div class="socials mt-4">
+                    <!-- <a class="social-item" href="https://www.facebook.com/amansharma870" target="_blank"><i class="ti-facebook"></i></a> -->
+                    <!-- <a class="social-item" href="https://x.com/i/flow/login?redirect_after_login=%2Fi_amnsharma" target="_blank"><i class="ti-twitter"></i></a> -->
+                    <a class="social-item" href="https://in.linkedin.com/in/aryan-arora-5b72392ab/" target="_blank"><i
+                            class="ti-linkedin"></i></a>
+                    <a class="social-item"
+                        href="https://www.instagram.com/_aryan_arora_01?igsh=MTZmYTZsbXV4b2RyYw%3D%3D&utm_source=qr"
+                        target="_blank"><i class="ti-instagram"></i></a>
+                    <a class="social-item" href="https://github.com/iamaryanarora" target="_blank"><i
+                            class="ti-github"></i></a>
+                    <!-- <a class="social-item" href="https://stackoverflow.com/users/17043234/aman-sharma" target="_blank"><i class="ti-stack-overflow"></i></a> -->
+                </div>
+            </div>
+            <div class="img-holder">
+                <img src="assets/imgs/man.svg" alt="">
+            </div>
+        </div>
+
+        <!-- Header-widget -->
+        <div class="widget">
+            <div class="widget-item">
+                <h2>5+</h2>
+                <p>Happy Clients</p>
+            </div>
+            <div class="widget-item">
+                <h2>5+</h2>
+                <p>Project Completed</p>
+            </div>
+            <div class="widget-item">
+                <h2>4.5</h2>
+                <p>Rating</p>
+            </div>
+        </div>
+    </header>
+    <!-- End of Page Header -->
+
+    <!-- About section -->
+    <section id="about" class="section mt-3">
+        <div class="container mt-5">
+            <div class="row text-center text-md-left">
+                <div class="col-md-3">
+                    <div class="tech-stack-card"
+                        style="background: linear-gradient(135deg, #1a1a1a, #2d2d2d); border-radius: 15px; padding: 30px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                        <div class="tech-icons" style="margin-bottom: 20px;">
+                            <i class="fab fa-node-js"
+                                style="font-size: 2.5rem; color: #68a063; margin: 10px; display: inline-block;"></i>
+                            <i class="fab fa-aws"
+                                style="font-size: 2.5rem; color: #ff9900; margin: 10px; display: inline-block;"></i>
+                            <i class="fas fa-database"
+                                style="font-size: 2.5rem; color: #336791; margin: 10px; display: inline-block;"></i>
+                            <i class="fas fa-code"
+                                style="font-size: 2.5rem; color: #E0234E; margin: 10px; display: inline-block;"></i>
+                        </div>
+                        <div style="color: #ffffff; margin-top: 15px;">
+                            <h4 style="font-weight: 600; margin-bottom: 10px;">Backend Expert</h4>
+                            <div style="width: 50px; height: 3px; background: #007bff; margin: 15px auto;"></div>
+                            <p style="font-size: 0.9rem; color: #cccccc;">Node.js • AWS • PostgreSQL • NestJS</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pl-md-4 col-md-6">
+                    <h6 class="title">Aryan Arora</h6>
+                    <p class="subtitle">Backend Developer</p>
+                    <p>Bringing over 1+ year of specialized expertise in Node.js and 2+ years of overall experience
+                        across diverse domains, including web development, backend engineering, and API design.
+                        Passionate about exploring new backend technologies and leveraging my expertise to build
+                        high-performance, scalable APIs and robust server-side applications. Adept at problem-solving,
+                        optimizing database queries, and implementing efficient backend architectures to enhance
+                        application performance. Seeking opportunities in a software-driven environment to contribute
+                        innovative solutions and further expand my technical skill set.
+                    </p>
+                    <!-- <a href="https://petvasta.s3.me-central-1.amazonaws.com/1743577668530-426050563.pdf" download="aryanarora.pdf" class="btn btn-dark rounded" onclick="event.preventDefault(); window.open(this.href, '_blank').then(() => window.location.href = this.href);">DOWNLOAD CV</a> -->
+                </div>
+                <div class="pl-md-4 col-md-3 badge-base LI-profile-badge" data-locale="en_US" data-size="medium"
+                    data-theme="light" data-type="VERTICAL" data-vanity="aryan-arora-5b72392ab" data-version="v1"><a
+                        class="badge-base__link LI-simple-link"
+                        href="https://in.linkedin.com/in/aryan-arora-5b72392ab?trk=profile-badge"></a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service section -->
+    <section id="service" class="section">
+        <div class="container text-center">
+            <h6 class="subtitle">Service</h6>
+            <h6 class="section-title mb-4">What I Do</h6>
+            <p class="mb-5 pb-4">I specialize in building scalable and efficient backend systems using Node.js, NestJS,
+                and Express, while leveraging AWS and Firebase for robust cloud infrastructure. My expertise includes
+                designing RESTful APIs, implementing database solutions, and ensuring high-performance server
+                architectures.</p>
+
+            <div class="row">
+                <div class="col-sm-6 col-md-3 mb-4">
+                    <div class="custom-card card border">
+                        <div class="card-body">
+                            <i class="icon ti-server"></i>
+                            <h5>Backend Development</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 mb-4">
+                    <div class="custom-card card border">
+                        <div class="card-body">
+                            <i class="icon ti-cloud"></i>
+                            <h5>Cloud Services</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 mb-4">
+                    <div class="custom-card card border">
+                        <div class="card-body">
+                            <i class="icon ti-bar-chart"></i>
+                            <h5>Database Developer</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 mb-4">
+                    <div class="custom-card card border">
+                        <div class="card-body">
+                            <i class="icon ti-layers"></i>
+                            <h5>API Development</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 mb-4">
+                    <div class="custom-card card border">
+                        <div class="card-body">
+                            <i class="icon ti-shield"></i>
+                            <h5>Security & Auth</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Sectoin -->
+
+    <!-- Skills section -->
+    <section class="section">
+        <div class="container text-center">
+            <h6 class="subtitle">Skills</h6>
+            <h6 class="section-title mb-4">Why Choose Me</h6>
+            <p class="mb-5 pb-4">I specialize in developing efficient and scalable backend systems, ensuring seamless
+                performance and reliability. My expertise lies in designing robust server-side architectures, optimizing
+                databases, and building secure APIs using Node.js, NestJS, and PostgreSQL. With a focus on performance
+                and scalability, I create backend solutions that power seamless user experiences and drive business
+                success.
+            </p>
+
+            <div class="row text-left">
+                <div class="col-sm-6">
+                    <h6 class="mb-3">Node.js</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;" aria-valuenow="95"
+                            aria-valuemin="0" aria-valuemax="100"><span>95%</span></div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <h6 class="mb-3">Express.js</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 85%;" aria-valuenow="90"
+                            aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <h6 class="mb-3">NestJS</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 95%;" aria-valuenow="85"
+                            aria-valuemin="0" aria-valuemax="100"><span>85%</span></div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <h6 class="mb-3">TypeScript</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 92%;" aria-valuenow="88"
+                            aria-valuemin="0" aria-valuemax="100"><span>88%</span></div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <h6 class="mb-3">PostgreSQL</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;" aria-valuenow="85"
+                            aria-valuemin="0" aria-valuemax="100"><span>85%</span></div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <h6 class="mb-3">MongoDB</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 78%;" aria-valuenow="82"
+                            aria-valuemin="0" aria-valuemax="100"><span>82%</span></div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <h6 class="mb-3">AWS</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;" aria-valuenow="80"
+                            aria-valuemin="0" aria-valuemax="100"><span>80%</span></div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <h6 class="mb-3">Firebase</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 85%;" aria-valuenow="85"
+                            aria-valuemin="0" aria-valuemax="100"><span>85%</span></div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <h6 class="mb-3">RESTful APIs</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 92%;" aria-valuenow="92"
+                            aria-valuemin="0" aria-valuemax="100"><span>92%</span></div>
+                    </div>
+                </div>
+                <!-- <div class="col-sm-6">
+                    <h6 class="mb-3">Docker</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><span>75%</span></div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- End of Skills sections -->
+
+    <!-- Portfolio section -->
+    <section id="portfolio" class="section">
+        <div class="container text-center">
+            <h6 class="subtitle">Portfolio</h6>
+            <h6 class="section-title mb-4">Check My Wonderful Works</h6>
+            <p class="mb-5 pb-4">Explore my backend development projects showcasing expertise in Node.js, Express,
+                NestJS, and database management. Each project demonstrates my commitment to building scalable, secure,
+                and efficient server-side solutions.</p>
+
+            <div class="portfolio-row">
+                <div class="portfolio-item">
+                    <div class="img-wrapper">
+                        <img src="https://play-lh.googleusercontent.com/xtAvL3wVPlPy-3bWfB4dI4XZeLuqvrpPNg6-MN51gueD6dnYJYlmmFjYvGRUNNSgb3qM=w480-h960-rw"
+                            alt="Ultimatum Project">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h5>Ultimatum</h5>
+                                <p>Streaming platform with integrated payment system. Built with Node.js, AWS S3, and
+                                    PostgreSQL.</p>
+                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
+                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="img-wrapper">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQNu03RaUVL6jfYBORQ2qqQf3YB_hwNcKIFg&s"
+                            alt="Kojyto Project">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h5>Kojyto</h5>
+                                <p>Smart cooking assistant with recipe management. Optimized API performance and user
+                                    experience.</p>
+                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
+                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="img-wrapper">
+                        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ac/a7/fd/aca7fdaa-9f67-dad7-70a0-26bffe4773ea/AppIcon-0-0-1x_U007emarketing-0-10-0-85-220.png/434x0w.webp"
+                            alt="Petvesta Project">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h5>Petvesta</h5>
+                                <p>Pet care eCommerce platform with real-time notifications and secure payment
+                                    processing.</p>
+                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
+                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="img-wrapper">
+                        <img src="https://petvasta.s3.me-central-1.amazonaws.com/1743509743571-365360741.png"
+                            alt="Real Estate Project">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h5>Real Estate</h5>
+                                <p>Property management system with role-based access and advanced search functionality.
+                                </p>
+                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
+                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="portfolio-item">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/gitya.jpg" alt="Gitya Infotech Project">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h5>Education Platform - Gitya</h5>
+                                <p>Learning management system with content tracking and secure user authentication.</p>
+                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
+                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="portfolio-item">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/database.jpg" alt="Database Project">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h5>Database Management</h5>
+                                <p>Robust data management system using PostgreSQL and MongoDB with migration tools.</p>
+                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
+                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- End of portfolio section -->
+
+    <!-- Testmonial Section -->
+    <!-- <section id="testmonial" class="section">
+        <div class="container text-center">
+            <h6 class="subtitle">Testmonial</h6>
+            <h6 class="section-title mb-4">What People Say About Me</h6>
+            <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br> rerum commodi corrupti, temporibus non quam.</p>
+
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card testmonial-card border">
+                            <div class="card-body">
+                                <img src="assets/imgs/avatar-1.jpg" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam nostrum voluptates in enim vel amet?</p>
+                                <h1 class="title">Emma Re</h1>
+                                <h1 class="subtitle">Graphic Designer</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card testmonial-card border">
+                            <div class="card-body">
+                                <img src="assets/imgs/avatar-2.jpg" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam nostrum voluptates in enim vel amet?</p>
+                                <h1 class="title">James Bert</h1>
+                                <h1 class="subtitle">Web Designer</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card testmonial-card border">
+                            <div class="card-body">
+                                <img src="assets/imgs/avatar-3.jpg" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam nostrum voluptates in enim vel amet?</p>
+                                <h1 class="title">Michael Abra</h1>
+                                <h1 class="subtitle">Web Developer</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- End of testmonial section -->
+
+    <!-- Blog Section -->
+    <section id="current-activities" class="section">
+        <div class="container text-center">
+            <h6 class="subtitle">What I'm Up To</h6>
+            <h6 class="section-title mb-4">Current Focus</h6>
+            <p class="mb-5 pb-4">I'm constantly expanding my skills and exploring new areas. Here's a look at my
+                current, upcoming, and future focuses in the tech world.</p>
+
+            <div class="row text-left">
+                <div class="col-md-4">
+                    <div class="card border mb-4">
+                        <img src="assets/imgs/js.png" alt="Deep Dive into JavaScript" class="card-img-top w-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Current Endeavor</h5>
+                            <div class="post-details">
+                                <a href="javascript:void(0)">Deep Dive: JavaScript</a>
+                            </div>
+                            <p>I'm diving deep into JavaScript to enhance my understanding and improve my skills in
+                                building complex, high-performance applications.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border mb-4">
+                        <img src="assets/imgs/ios.png" alt="Upcoming Focus: iOS Development" class="card-img-top w-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Upcoming Venture</h5>
+                            <div class="post-details">
+                                <a href="javascript:void(0)">Next: Python</a>
+                            </div>
+                            <p>My next focus will be on Python development, with the goal of expanding your expertise in
+                                creating intuitive applications.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border mb-4">
+                        <img src="assets/imgs/blockchain.png" alt="Future Focus: Blockchain" class="card-img-top w-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Future Exploration</h5>
+                            <div class="post-details">
+                                <a href="javascript:void(0)">Later: Blockchain</a>
+                            </div>
+                            <p>In the future, I plan to delve into blockchain technology, exploring its potential for
+                                creating decentralized applications.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Hire me section -->
+    <section class="bg-gray p-0 section">
+        <div class="container">
+            <div class="card bg-primary">
+                <div class="card-body text-light">
+                    <div class="row align-items-center">
+                        <div class="col-sm-9 text-center text-sm-left">
+                            <h5 class="mt-3">Ready to Bring Your Vision to Life</h5>
+                            <p class="mb-3">Let's collaborate to create something exceptional. Whether it's a new
+                                project or enhancing an existing one, I'm here to help you achieve your goals.</p>
+                        </div>
+                        <div class="col-sm-3 text-center text-sm-right">
+                            <a href="https://in.linkedin.com/in/aryan-arora-5b72392ab/" target="_blank"
+                                class="btn btn-light rounded">Hire Me!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- End od Hire me section. -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="position-relative section">
+        <div class="container text-center">
+            <h6 class="subtitle">Contact</h6>
+            <h6 class="section-title mb-4">Get In Touch With Me</h6>
+            <p class="mb-5 pb-4">I'm always open to new opportunities and conversations. Whether you have a project in
+                mind, need advice, or just want to connect, feel free to reach out. I'm here to help and look forward to
+                hearing from you!</p>
+
+            <div class="contact text-left">
+                <div class="form">
+                    <h6 class="subtitle">Available 24/7</h6>
+                    <h6 class="section-title mb-4">Get In Touch</h6>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp"
+                                placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="subjectInput" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="contact-message" id="messageInput" cols="30" rows="5" class="form-control"
+                                placeholder="Message"></textarea>
+                        </div>
+                        <button type="button" onclick="sendEmail()" class="btn btn-primary btn-block rounded w-lg">Send
+                            Message</button>
+                    </form>
+                </div>
+                <div class="contact-infos">
+                    <div class="item">
+                        <i class="ti-location-pin"></i>
+                        <div class="">
+                            <h5>Location</h5>
+                            <p>Shiv circle, Sri Ganganagar</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <i class="ti-mobile"></i>
+                        <div>
+                            <h5>Phone Number</h5>
+                            <p>+919928587916</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <i class="ti-email"></i>
+                        <div class="mb-0">
+                            <h5>Email Address</h5>
+                            <p>iamaryanarora@icloud.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="map">
+            <iframe src="https://snazzymaps.com/embed/61257"></iframe>
+        </div>
+    </section>
+
+    <script>
+        function sendEmail() {
+            var email = "iamaryanarora@icloud.com";
+            var subject = document.getElementById("subjectInput").value;
+            var message = document.getElementById("messageInput").value;
+            var mailtoLink = "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(message);
+            window.location.href = mailtoLink;
+        }
+    </script>
+
+
+    <!-- End of Contact Section -->
+
+    <!-- Page Footer -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-sm-6">
+                    <p>Copyright
+                        <script>document.write(new Date().getFullYear())</script> &copy; <a
+                            href="https://in.linkedin.com/in/aryan-arora-5b72392ab/" target="_blank">iamaryanarora</a>
+                    </p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="socials">
+                        <!-- <a class="social-item" href="https://www.facebook.com/amansharma870" target="_blank"><i class="ti-facebook"></i></a> -->
+                        <!-- <a class="social-item" href="https://x.com/i/flow/login?redirect_after_login=%2Fi_amnsharma" target="_blank"><i class="ti-twitter"></i></a> -->
+                        <a class="social-item" href="https://in.linkedin.com/in/aryan-arora-5b72392ab/"
+                            target="_blank"><i class="ti-linkedin"></i></a>
+                        <a class="social-item"
+                            href="https://www.instagram.com/_aryan_arora_01?igsh=MTZmYTZsbXV4b2RyYw%3D%3D&utm_source=qr"
+                            target="_blank"><i class="ti-instagram"></i></a>
+                        <a class="social-item" href="https://github.com/iamaryanarora" target="_blank"><i
+                                class="ti-github"></i></a>
+                        <!-- <a class="social-item" href="https://stackoverflow.com/users/17043234/aman-sharma" target="_blank"><i class="ti-stack-overflow"></i></a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End of page footer -->
+
+    <!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+    <!-- bootstrap 3 affix -->
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- steller js -->
+    <script src="assets/js/steller.js"></script>
+
+    <!-- linkedin -->
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+
+</body>
+
+</html>
