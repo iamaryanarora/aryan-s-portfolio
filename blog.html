@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .card-description {
+            font-size: 1em;
+            color: #555;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center; margin-top: 20px;">Blog</h1>
+
+    <div class="container">
+        <div class="card" onclick="openBlog('blog1.html')">
+            <img src="https://via.placeholder.com/300x200" alt="Blog Image">
+            <div class="card-content">
+                <h3 class="card-title">Blog Title 1</h3>
+                <p class="card-description">This is a short description of the first blog. Click to read more.</p>
+            </div>
+        </div>
+        
+        <div class="card" onclick="openBlog('blog2.html')">
+            <img src="https://via.placeholder.com/300x200" alt="Blog Image">
+            <div class="card-content">
+                <h3 class="card-title">Blog Title 2</h3>
+                <p class="card-description">This is a short description of the second blog. Click to read more.</p>
+            </div>
+        </div>
+
+        <!-- Add more blog cards here -->
+    </div>
+
+    <script>
+        function openBlog(blogUrl) {
+            // Redirects to the specific blog page (you can set up individual blog pages like blog1.html)
+            window.location.href = blogUrl;
+        }
+    </script>
+
+</body>
+</html>
