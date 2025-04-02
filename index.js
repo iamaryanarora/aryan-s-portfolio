@@ -1,6 +1,5 @@
 const express = require('express');
 const path = require('path');
-const fs = require('fs');
 const app = express();
 
 // Enable CORS for all routes
@@ -10,41 +9,12 @@ app.use((req, res, next) => {
     next();
 });
 
-// Serve static files from public_html directory
-app.use(express.static(path.join(__dirname)));
+// Serve static files from the root directory
+app.use(express.static(__dirname));
 
-// Special route for CV
+// Redirect CV requests to S3
 app.get('/assets/aryanarora.pdf', (req, res) => {
-    const file = path.join(__dirname, 'assets', 'aryanarora.pdf');
-    
-    // Check if file exists
-    if (!fs.existsSync(file)) {
-        console.error('PDF file not found:', file);
-        return res.status(404).send('PDF file not found');
-    }
-
-    // Get file stats for content length
-    const stat = fs.statSync(file);
-
-    // Set response headers
-    res.setHeader('Content-Type', 'application/pdf');
-    res.setHeader('Content-Length', stat.size);
-    
-    // If download parameter is present, set content disposition to attachment
-    if (req.query.download === 'true') {
-        res.setHeader('Content-Disposition', 'attachment; filename=aryanarora.pdf');
-    } else {
-        res.setHeader('Content-Disposition', 'inline');
-    }
-
-    // Create read stream and pipe to response
-    const fileStream = fs.createReadStream(file);
-    fileStream.on('error', (error) => {
-        console.error('Error reading PDF:', error);
-        res.status(500).send('Error reading PDF file');
-    });
-    
-    fileStream.pipe(res);
+    res.redirect('https://petvasta.s3.me-central-1.amazonaws.com/1743580723252-617477134.pdf');
 });
 
 // Serve index.html for the root route
@@ -59,7 +29,7 @@ app.use((err, req, res, next) => {
 });
 
 // Start server
-const port = 3000;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
-    console.log(`
+});
