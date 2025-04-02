@@ -14,7 +14,7 @@ app.use(express.static(__dirname));
 
 // Redirect CV requests to S3
 app.get('/assets/aryanarora.pdf', (req, res) => {
-    res.redirect('https://petvasta.s3.me-central-1.amazonaws.com/1743580723252-617477134.pdf');
+    res.redirect('https://petvasta.s3.me-central-1.amazonaws.com/1743581708540-760136661.pdf');
 });
 
 // Serve index.html for the root route
