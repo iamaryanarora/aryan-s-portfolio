@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with Steller landing page.">
     <meta name="author" content="Devcrud">
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Bootstrap + Steller main styles -->
-    <link rel="stylesheet" href="assets/css/steller.css">
+	<link rel="stylesheet" href="assets/css/steller.css">
 </head>
 <style>
     .img-wrapper {
@@ -129,6 +129,42 @@
             flex: 0 0 100%;
         }
     }
+
+    .navbar {
+        min-height: 80px;
+        padding: 10px 0;
+        background: #fff !important;
+    }
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin-right: 40px;
+    }
+
+    .navbar-brand img {
+        width: 100px !important;
+        height: auto !important;
+        padding: 0;
+        margin: 0;
+        background: transparent !important;
+        border: none;
+        box-shadow: none;
+        object-fit: contain;
+        filter: none !important;
+    }
+
+    .navbar.affix {
+        min-height: 70px;
+        background: #fff !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar.affix .navbar-brand img {
+        width: 90px !important;
+        transition: all 0.3s ease;
+    }
 </style>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
@@ -136,7 +172,9 @@
     <!-- Page navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="assets/imgs/logo.svg" alt=""></a>
+            <div style="width: 100px;">
+                <a class="navbar-brand" href="#"><img src="https://petvasta.s3.me-central-1.amazonaws.com/1743653689552-397071046.png" alt="Logo"></a>
+            </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -152,7 +190,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#service">Service</a>
-                    </li>
+                    </li>                   
                     <li class="nav-item">
                         <a class="nav-link" href="#portfolio">Portfolio</a>
                     </li>
@@ -170,7 +208,7 @@
                     </li> -->
                 </ul>
             </div>
-        </div>
+        </div>          
     </nav>
     <!-- End of page navibation -->
 
@@ -180,7 +218,7 @@
         <div class="container">
 
             <div class="infos">
-
+                            
                 <h6 class="subtitle">hello,I'm</h6>
                 <h6 class="title">Aryan Arora</h6>
                 <p style="margin-top: 15px;">Backend Developer</p>
@@ -189,7 +227,7 @@
                         class="btn btn-primary rounded">HIRE ME</a>
                     <a href="https://petvasta.s3.me-central-1.amazonaws.com/1743581708540-760136661.pdf" download class="btn btn-dark rounded">DOWNLOAD CV</a>
                 </div>
-
+                                
 
                 <div class="socials mt-4">
                     <!-- <a class="social-item" href="https://www.facebook.com/amansharma870" target="_blank"><i class="ti-facebook"></i></a> -->
@@ -203,11 +241,11 @@
                             class="ti-github"></i></a>
                     <!-- <a class="social-item" href="https://stackoverflow.com/users/17043234/aman-sharma" target="_blank"><i class="ti-stack-overflow"></i></a> -->
                 </div>
-            </div>
+        </div>              
             <div class="img-holder">
                 <img src="assets/imgs/man.svg" alt="">
-            </div>
-        </div>
+            </div>      
+        </div>  
 
         <!-- Header-widget -->
         <div class="widget">
@@ -226,7 +264,7 @@
         </div>
     </header>
     <!-- End of Page Header -->
-
+    
     <!-- About section -->
     <section id="about" class="section mt-3">
         <div class="container mt-5">
@@ -339,7 +377,7 @@
                 and scalability, I create backend solutions that power seamless user experiences and drive business
                 success.
             </p>
-
+    
             <div class="row text-left">
                 <div class="col-sm-6">
                     <h6 class="mb-3">Node.js</h6>
@@ -410,10 +448,10 @@
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><span>75%</span></div>
                     </div>
                 </div> -->
-            </div>
+            </div>  
         </div>
     </section>
-
+    
     <!-- End of Skills sections -->
 
     <!-- Portfolio section -->
@@ -493,12 +531,11 @@
                             <div class="overlay-infos">
                                 <h5>Education Platform - Gitya</h5>
                                 <p>Learning management system with content tracking and secure user authentication.</p>
-                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
-                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
+                                    <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
+                                    <a href="javascript:void(0)"><i class="ti-link"></i></a>
                             </div>
                         </div>
-                    </div>
-                </div> -->
+                    </div> -->
                 <!-- <div class="portfolio-item">
                     <div class="img-wrapper">
                         <img src="assets/imgs/database.jpg" alt="Database Project">
@@ -515,9 +552,9 @@
             </div>
         </div>
     </section>
-
-
-
+    
+    
+    
     <!-- End of portfolio section -->
 
     <!-- Testmonial Section -->
@@ -578,7 +615,7 @@
             <h6 class="section-title mb-4">Current Focus</h6>
             <p class="mb-5 pb-4">I'm constantly expanding my skills and exploring new areas. Here's a look at my
                 current, upcoming, and future focuses in the tech world.</p>
-
+        
             <div class="row text-left">
                 <div class="col-md-4">
                     <div class="card border mb-4">
@@ -622,8 +659,8 @@
             </div>
         </div>
     </section>
-
-
+        
+    
 
     <!-- Hire me section -->
     <section class="bg-gray p-0 section">
@@ -641,11 +678,11 @@
                                 class="btn btn-light rounded">Hire Me!</a>
                         </div>
                     </div>
-                </div>
+                </div> 
             </div>
         </div>
     </section>
-
+            
     <!-- End od Hire me section. -->
 
     <!-- Contact Section -->
@@ -656,7 +693,7 @@
             <p class="mb-5 pb-4">I'm always open to new opportunities and conversations. Whether you have a project in
                 mind, need advice, or just want to connect, feel free to reach out. I'm here to help and look forward to
                 hearing from you!</p>
-
+            
             <div class="contact text-left">
                 <div class="form">
                     <h6 class="subtitle">Available 24/7</h6>
@@ -683,14 +720,14 @@
                         <div class="">
                             <h5>Location</h5>
                             <p>Shiv circle, Sri Ganganagar</p>
-                        </div>
+                        </div>                          
                     </div>
                     <div class="item">
                         <i class="ti-mobile"></i>
                         <div>
                             <h5>Phone Number</h5>
                             <p>+919928587916</p>
-                        </div>
+                        </div>                          
                     </div>
                     <div class="item">
                         <i class="ti-email"></i>
@@ -699,14 +736,14 @@
                             <p>iamaryanarora@icloud.com</p>
                         </div>
                     </div>
-                </div>
+                </div>                  
             </div>
-        </div>
+        </div>  
         <div id="map">
             <iframe src="https://snazzymaps.com/embed/61257"></iframe>
-        </div>
+        </div>      
     </section>
-
+    
     <script>
         function sendEmail() {
             var email = "iamaryanarora@icloud.com";
@@ -716,8 +753,8 @@
             window.location.href = mailtoLink;
         }
     </script>
-
-
+    
+    
     <!-- End of Contact Section -->
 
     <!-- Page Footer -->
@@ -747,19 +784,19 @@
             </div>
         </div>
     </footer>
-    <!-- End of page footer -->
-
-    <!-- core  -->
+        <!-- End of page footer -->
+	
+	<!-- core  -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
     <!-- bootstrap 3 affix -->
-    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
 
     <!-- steller js -->
     <script src="assets/js/steller.js"></script>
 
     <!-- linkedin -->
-    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>              
 
 </body>
 
